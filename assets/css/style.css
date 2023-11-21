@@ -84,12 +84,9 @@ h1 {
 }
 
 .button1,
-#results h1,
 .button,
 h1,
-h2,
-#correct h2,
-#wrong h2 {
+h2 {
   font-family: 'Outfit', sans-serif;
 }
 
@@ -285,6 +282,7 @@ section p {
     }
   }
 }
+
 input:focus {
   outline: none;
 }
@@ -297,10 +295,6 @@ svg {
 
 #paginaQuiz {
   margin-top: 100px;
-}
-
-#question h1 {
-  margin-bottom: 60px;
 }
 
 #four-answers button {

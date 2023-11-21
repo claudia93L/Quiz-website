@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+</head>
+
+<body>
+<body>
+    <div id="container">
+        <header>
+            <img src="assets/images/epicode_logo.png" alt="logo" />
+        </header>
+        <main>
+            <br />
+            <br />
+            <h1>Welcome to <br /> <span>your exam</span></h1>
+            <div id="corpo">
+                <h2>Instructions</h2>
+                <p>We don't expect most engineers to know the answers to all of these <br /> questions, so don't worry
+                    if you're unsure of a few of them.</p>
+                &nbsp;
+                <div id="lista">
+                    <ul>
+                        <li>Each question is <span>timed</span> and can only be <span>answered once</span>.</li>
+                        <li>Changing browser tab or opening other windows will <span>invalidate the question</span>.
+                        </li>
+                        <li>Thi exam will take approx. <span>0-5 minutes</span>.</li>
+                    </ul>
+                </div>
+            </div>
+            <br />
+        </main>
+        <footer>
+            <div id="checked">
+                <div class="checked">
+                    <form>
+                        <input type="checkbox" name="check" id="check" onchange="enableButton()" />
+                        <label for="check" id="checklabel">I promise to answer myself without help from anyone</label>
+                </div>
+                <div class="checked">
+                    <button type="button" id="proceed" class="button" disabled onclick="window.location.href = 'quiz.html';">
+                    <b>PROCEED</b>
+                </button>
+                </div>
+                    </form>
+                </div>
+        </footer>
+    </div>
+    <script src="assets/js/index.js"></script>
+</body>
+
+</body>
+
+</html>

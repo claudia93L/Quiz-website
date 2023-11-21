@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@500&family=Outfit:wght@300;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700;900&display=swap');
+
+body {
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url(../images/bg.jpg);
+  background-size: 100%;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  background-repeat: no-repeat;
+}
+
+header img {
+  width: 12%;
+}
+
+#container {
+  margin: 30px 160px;
+}
+
+#check {
+  appearance: none;
+  border: 1px solid white;
+  width: 12px;
+  height: 12px;
+}
+
+#checklabel {
+  font-size: medium;
+  display: inline;
+  color: white;
+  padding-left: 10px;
+}
+
+h1 {
+  font-family: Outfit;
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 0.7;
+}
+
+span {
+  font-weight: 700;
+}
+
+h2 {
+  font-family: Outfit;
+  color: #d20094;
+}
+
+#corpo p {
+  margin-top: -15px;
+}
+
+ul {
+  line-height: 1.5;
+  margin-left: -18px;
+}
+
+#lista {
+  margin-bottom: 70px;
+}
+
+.button {
+  background-color: #54efff;
+  font-size: 1.2em;
+  padding: 15px 60px;
+  -webkit-box-shadow: 2px 0px 18px 3px #54efff;
+  box-shadow: 2px 0px 18px 3px #54efff;
+  cursor: pointer;
+  border: none;
+  color: #0b113b;
+  font-family: 'Outfit', sans-serif;
+}
+
+#check:checked {
+  background-color: #d20094;
+}
+
+#checked {
+  display: block;
+  width: 100%;
+}
+.checked {
+  display: inline-block;
+}
+
+#checked div:nth-of-type(1) {
+  width: 60%;
+}
+#checked div:nth-of-type(2) {
+  width: 30%;
+}
+
+input {
+  width: 55%;
+  border: none;
+  height: 25px;
+  text-align: center;
+}
+
+input[type='text'] {
+  background: transparent;
+  color: white;
+  text-align: left;
+}
+
+.input {
+  margin-left: 150px;
+}
+
+input::placeholder {
+  text-align: left;
+}
+
+hr {
+  width: 35%;
+  border-color: #d20094;
+  margin-top: -25px;
+  margin-bottom: 40px;
+}
+
+section p {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#reviewPage,
+.button-review {
+  text-align: center;
+}
+
+#reviewPage h1 {
+  font-size: 2.5em;
+}
+
+#reviewPage p {
+  font-size: 1.2em;
+}
+
+#reviewPage {
+  margin-top: 100px;
+}
+
+.stars {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  cursor: pointer;
+
+  &[data-stars] {
+    .star path {
+      fill: #00ffff;
+    }
+  }
+
+  &[data-stars='1'] {
+    .star:nth-child(1) ~ .star path {
+      fill: #080c2c;
+    }
+  }
+
+  &[data-stars='2'] {
+    .star:nth-child(2) ~ .star path {
+      fill: #080c2c;
+    }
+  }
+
+  &[data-stars='3'] {
+    .star:nth-child(3) ~ .star path {
+      fill: #080c2c;
+    }
+  }
+
+  &[data-stars='4'] {
+    .star:nth-child(4) ~ .star path {
+      fill: #080c2c;
+    }
+  }
+
+  &[data-stars='5'] {
+    .star:nth-child(5) ~ .star path {
+      fill: #080c2c;
+    }
+  }
+  &[data-stars='6'] {
+    .star:nth-child(6) ~ .star path {
+      fill: #080c2c;
+    }
+  }
+  &[data-stars='7'] {
+    .star:nth-child(7) ~ .star path {
+      fill: #080c2c;
+    }
+  }
+  &[data-stars='8'] {
+    .star:nth-child(8) ~ .star path {
+      fill: #080c2c;
+    }
+  }
+  &[data-stars='9'] {
+    .star:nth-child(9) ~ .star path {
+      fill: #080c2c;
+    }
+  }
+  &[data-stars='10'] {
+    .star:nth-child(10) ~ .star path {
+      fill: #080c2c;
+    }
+  }
+}
+input:focus {
+  outline: none;
+}
+svg {
+  margin-left: 10px;
+}
+#paginaQuiz {
+  text-align: center;
+  margin-top: 130px;
+}
+#question h1 {
+  margin-bottom: 60px;
+}
+
+#four-answers button {
+  font-size: large;
+  border: none;
+  background-color: rgba(117, 117, 117, 0.212);
+  width: 30pc;
+  height: 80px;
+  border-radius: 50px;
+  cursor: pointer;
+  justify-content: center;
+  margin: 20px auto;
+  color: rgb(255, 255, 255);
+  box-shadow: rgb(255, 255, 255) -2px -2px 0px, rgba(255, 255, 255) 0px -3px 0px,
+    rgba(255, 255, 255) 0px 0px 0px, rgba(255, 255, 255) -3px 0px 0px;
+}
+#answer-1,
+#answer-2,
+#answer-3,
+#answer-4 {
+  display: inline;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+#four-answers button:hover {
+  background-image: linear-gradient(#d20094, rgb(100, 32, 69));
+}
+
+#question h1 {
+  margin-bottom: 60px;
+  line-height: 1.1em;
+}
+#counter span {
+  color: #d20094;
+}
+#counter {
+  margin-top: 200px;
+}
+
+#countdown {
+  position: relative;
+  margin: auto;
+  margin-top: 100px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+}
+
+#countdown-number {
+  color: white;
+  display: inline-block;
+  line-height: 40px;
+}
+
+#countdown svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+svg #circle {
+  stroke-dasharray: 113px;
+  stroke-dashoffset: 0px;
+  stroke-linecap: round;
+  stroke-width: 5px;
+  stroke: #00ffff;
+  fill: none;
+  animation: countdown 20s linear infinite forwards;
+}
+
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 0px;
+  }
+  to {
+    stroke-dashoffset: 113px;
+  }
+}
+
+#circle1 {
+  stroke-width: 5px;
+  stroke: #ffffff60;
+  fill: none;
+}
+
+#results h1 {
+  text-align: center;
+  font-family: 'Outfit';
+  font-size: 60px;
+  font-weight: 700;
+}
+
+#results p {
+  font-size: 32px;
+  text-align: center;
+  font-family: 'Outfit';
+  font-weight: 300;
+}
+
+#results {
+  line-height: 0em;
+}
+
+#correct h2 {
+  font-weight: 500;
+  font-family: 'Outfit';
+  font-size: 60px;
+  color: white;
+}
+
+#wrong h2 {
+  font-weight: 500;
+  font-family: 'Outfit';
+  font-size: 60px;
+  color: white;
+}
+
+#summary {
+  width: 100%;
+  display: block;
+  margin-left: 90px;
+  margin-right: 90px;
+}
+
+#summary h3 {
+  font-size: 2.4em;
+  line-height: 0.5em;
+}
+
+#summary #donutChart {
+  text-align: center;
+}
+
+#correct,
+#correct p {
+  text-align: left;
+}
+
+#correct p,
+#wrong p {
+  font-size: 1em;
+}
+
+#wrong,
+#wrong p {
+  text-align: right;
+}
+
+.risultati {
+  width: 30%;
+  display: inline-block;
+}
+
+.hidden {
+  display: none;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.button1 {
+  background-color: transparent;
+  font-size: 2em;
+  font: bold;
+  padding: 15px 60px;
+  cursor: pointer;
+  -webkit-box-shadow: 2px 0px 18px 3px #232c7c;
+  box-shadow: 2px 0px 18px 3px #2b3899;
+  border: 3px solid white;
+  color: white;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* .container-donut {
+  position: relative;
+}
+
+.donut-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.donut-text p {
+  text-align: center;
+  font-size: 5px;
+  font-weight: bold;
+} */

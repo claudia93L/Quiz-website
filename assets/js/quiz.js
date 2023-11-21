@@ -135,6 +135,7 @@ let questionNumber = 0;
 
 document.addEventListener('DOMContentLoaded', function () {
   caricaQuiz();
+  gestoreClickBottoni();
 });
 
 function caricaQuiz() {
@@ -146,7 +147,7 @@ function caricaQuiz() {
 
     answer1.innerText = questions[questionNumber].correct_answer;
     answer2.innerText = questions[questionNumber].incorrect_answers[0];
-  
+
     answer3.innerText = questions[questionNumber].incorrect_answers[1];
     answer4.innerText = questions[questionNumber].incorrect_answers[2];
 
@@ -161,25 +162,27 @@ function caricaQuiz() {
   }
 }
 
-answer1.addEventListener('click', function () {
-  answer = answer1.innerText;
-  verificaRisposta();
-});
+function gestoreClickBottoni() {
+  answer1.addEventListener('click', function () {
+    answer = answer1.innerText;
+    verificaRisposta();
+  });
 
-answer2.addEventListener('click', function () {
-  answer = answer2.innerText;
-  verificaRisposta();
-});
+  answer2.addEventListener('click', function () {
+    answer = answer2.innerText;
+    verificaRisposta();
+  });
 
-answer3.addEventListener('click', function () {
-  answer = answer3.innerText;
-  verificaRisposta();
-});
+  answer3.addEventListener('click', function () {
+    answer = answer3.innerText;
+    verificaRisposta();
+  });
 
-answer4.addEventListener('click', function () {
-  answer = answer4.innerText;
-  verificaRisposta();
-});
+  answer4.addEventListener('click', function () {
+    answer = answer4.innerText;
+    verificaRisposta();
+  });
+}
 
 function verificaRisposta() {
   // console.log(answer);

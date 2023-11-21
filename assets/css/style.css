@@ -33,7 +33,6 @@ h1 {
   padding: 15px 60px;
   -webkit-box-shadow: 2px 0px 18px 3px #54efff;
   box-shadow: 2px 0px 18px 3px #54efff;
-  cursor: pointer;
   color: #0b113b;
 }
 
@@ -104,7 +103,43 @@ span,
   font-weight: 500;
 }
 
+.checked,
+#countdown-number,
+.risultati {
+  display: inline-block;
+}
+
+#checked div:nth-of-type(2),
+.risultati {
+  width: 30%;
+}
+
+#checked,
+#summary {
+  width: 100%;
+}
+
+#counter span,
+h2 {
+  color: #d20094;
+}
+
+.button1,
+.stars,
+#four-answers button,
+.button {
+  cursor: pointer;
+}
+
 /* HOMEPAGE / INDEX */
+
+.container-index h1 {
+  margin-top: 100px;
+}
+
+.checkbox-button {
+  margin-top: 50px;
+}
 
 #check {
   appearance: none;
@@ -117,10 +152,6 @@ span,
   font-size: medium;
   display: inline;
   padding-left: 10px;
-}
-
-h2 {
-  color: #d20094;
 }
 
 #corpo p {
@@ -140,18 +171,14 @@ ul {
   background-color: #d20094;
 }
 
-#checked {
-  width: 100%;
-}
-.checked {
-  display: inline-block;
-}
-
 #checked div:nth-of-type(1) {
   width: 60%;
 }
-#checked div:nth-of-type(2) {
-  width: 30%;
+
+#proceed:disabled {
+  background-color: #959c9c;
+  box-shadow: none;
+  color: #363535;
 }
 
 /* REVIEW PAGE */
@@ -196,7 +223,6 @@ section p {
 .stars {
   margin-top: 60px;
   margin-bottom: 60px;
-  cursor: pointer;
 
   &[data-stars] {
     .star path {
@@ -270,7 +296,7 @@ svg {
 /* QUIZ PAGE */
 
 #paginaQuiz {
-  margin-top: 130px;
+  margin-top: 100px;
 }
 
 #question h1 {
@@ -283,8 +309,6 @@ svg {
   width: 30pc;
   height: 80px;
   border-radius: 50px;
-  cursor: pointer;
-  justify-content: center;
   margin: 20px auto;
   color: rgb(255, 255, 255);
   box-shadow: rgb(255, 255, 255) -2px -2px 0px, rgba(255, 255, 255) 0px -3px 0px,
@@ -309,12 +333,8 @@ svg {
   line-height: 1.1em;
 }
 
-#counter span {
-  color: #d20094;
-}
-
 #counter {
-  margin-top: 200px;
+  margin-top: 50px;
 }
 
 #countdown {
@@ -326,7 +346,6 @@ svg {
 }
 
 #countdown-number {
-  display: inline-block;
   line-height: 40px;
 }
 
@@ -376,7 +395,6 @@ svg #circle {
 }
 
 #summary {
-  width: 100%;
   margin-left: 90px;
   margin-right: 90px;
 }
@@ -396,11 +414,6 @@ svg #circle {
   text-align: right;
 }
 
-.risultati {
-  width: 30%;
-  display: inline-block;
-}
-
 .hidden {
   display: none;
 }
@@ -414,7 +427,6 @@ svg #circle {
   font-size: 2em;
   font-weight: bold;
   padding: 15px 60px;
-  cursor: pointer;
   -webkit-box-shadow: 2px 0px 18px 3px #232c7c;
   box-shadow: 2px 0px 18px 3px #2b3899;
   border: 3px solid white;

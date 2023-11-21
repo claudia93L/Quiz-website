@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@500&family=Outfit:wght@300;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700;900&display=swap');
 
+/* GENERALE */
+
 body {
   font-size: 1.2em;
   margin: 0;
@@ -8,7 +10,6 @@ body {
   box-sizing: border-box;
   background-image: url(../images/bg.jpg);
   background-size: 100%;
-  color: white;
   font-family: 'Inter', sans-serif;
   background-repeat: no-repeat;
 }
@@ -17,9 +18,93 @@ header img {
   width: 12%;
 }
 
+h1 {
+  font-weight: 300;
+  line-height: 0.7;
+}
+
 #container {
   margin: 30px 160px;
 }
+
+.button {
+  background-color: #54efff;
+  font-size: 1.2em;
+  padding: 15px 60px;
+  -webkit-box-shadow: 2px 0px 18px 3px #54efff;
+  box-shadow: 2px 0px 18px 3px #54efff;
+  cursor: pointer;
+  color: #0b113b;
+}
+
+.button,
+input,
+#four-answers button {
+  border: none;
+}
+
+.footer,
+#summary #donutChart,
+input,
+#reviewPage,
+.button-review,
+#paginaQuiz,
+#results h1,
+#countdown,
+#results p {
+  text-align: center;
+}
+
+#checked,
+#summary {
+  display: block;
+}
+
+input[type='text'],
+input::placeholder,
+#correct,
+#correct p {
+  text-align: left;
+}
+
+#checklabel,
+input[type='text'],
+body,
+#countdown-number,
+#correct h2,
+#wrong h2,
+.button1 {
+  color: #fff;
+}
+
+#results h1,
+#correct h2,
+#wrong h2,
+h1 {
+  font-size: 60px;
+}
+
+.button1,
+#results h1,
+.button,
+h1,
+h2,
+#correct h2,
+#wrong h2 {
+  font-family: 'Outfit', sans-serif;
+}
+
+span,
+#results h1 {
+  font-weight: 700;
+}
+
+#correct h2,
+#wrong h2 {
+  font-weight: 500;
+}
+
+/* HOMEPAGE / INDEX */
 
 #check {
   appearance: none;
@@ -31,23 +116,10 @@ header img {
 #checklabel {
   font-size: medium;
   display: inline;
-  color: white;
   padding-left: 10px;
 }
 
-h1 {
-  font-family: Outfit;
-  font-size: 60px;
-  font-weight: 300;
-  line-height: 0.7;
-}
-
-span {
-  font-weight: 700;
-}
-
 h2 {
-  font-family: Outfit;
   color: #d20094;
 }
 
@@ -64,24 +136,11 @@ ul {
   margin-bottom: 70px;
 }
 
-.button {
-  background-color: #54efff;
-  font-size: 1.2em;
-  padding: 15px 60px;
-  -webkit-box-shadow: 2px 0px 18px 3px #54efff;
-  box-shadow: 2px 0px 18px 3px #54efff;
-  cursor: pointer;
-  border: none;
-  color: #0b113b;
-  font-family: 'Outfit', sans-serif;
-}
-
 #check:checked {
   background-color: #d20094;
 }
 
 #checked {
-  display: block;
   width: 100%;
 }
 .checked {
@@ -95,25 +154,19 @@ ul {
   width: 30%;
 }
 
+/* REVIEW PAGE */
+
 input {
   width: 55%;
-  border: none;
   height: 25px;
-  text-align: center;
 }
 
 input[type='text'] {
   background: transparent;
-  color: white;
-  text-align: left;
 }
 
 .input {
   margin-left: 150px;
-}
-
-input::placeholder {
-  text-align: left;
 }
 
 hr {
@@ -126,11 +179,6 @@ hr {
 section p {
   margin-top: 40px;
   margin-bottom: 40px;
-}
-
-#reviewPage,
-.button-review {
-  text-align: center;
 }
 
 #reviewPage h1 {
@@ -214,20 +262,23 @@ section p {
 input:focus {
   outline: none;
 }
+
 svg {
   margin-left: 10px;
 }
+
+/* QUIZ PAGE */
+
 #paginaQuiz {
-  text-align: center;
   margin-top: 130px;
 }
+
 #question h1 {
   margin-bottom: 60px;
 }
 
 #four-answers button {
   font-size: large;
-  border: none;
   background-color: rgba(117, 117, 117, 0.212);
   width: 30pc;
   height: 80px;
@@ -239,6 +290,7 @@ svg {
   box-shadow: rgb(255, 255, 255) -2px -2px 0px, rgba(255, 255, 255) 0px -3px 0px,
     rgba(255, 255, 255) 0px 0px 0px, rgba(255, 255, 255) -3px 0px 0px;
 }
+
 #answer-1,
 #answer-2,
 #answer-3,
@@ -247,6 +299,7 @@ svg {
   margin-right: 20px;
   margin-left: 20px;
 }
+
 #four-answers button:hover {
   background-image: linear-gradient(#d20094, rgb(100, 32, 69));
 }
@@ -255,9 +308,11 @@ svg {
   margin-bottom: 60px;
   line-height: 1.1em;
 }
+
 #counter span {
   color: #d20094;
 }
+
 #counter {
   margin-top: 200px;
 }
@@ -268,11 +323,9 @@ svg {
   margin-top: 100px;
   height: 40px;
   width: 40px;
-  text-align: center;
 }
 
 #countdown-number {
-  color: white;
   display: inline-block;
   line-height: 40px;
 }
@@ -311,17 +364,10 @@ svg #circle {
   fill: none;
 }
 
-#results h1 {
-  text-align: center;
-  font-family: 'Outfit';
-  font-size: 60px;
-  font-weight: 700;
-}
+/* RESULTS PAGE */
 
 #results p {
   font-size: 32px;
-  text-align: center;
-  font-family: 'Outfit';
   font-weight: 300;
 }
 
@@ -329,23 +375,8 @@ svg #circle {
   line-height: 0em;
 }
 
-#correct h2 {
-  font-weight: 500;
-  font-family: 'Outfit';
-  font-size: 60px;
-  color: white;
-}
-
-#wrong h2 {
-  font-weight: 500;
-  font-family: 'Outfit';
-  font-size: 60px;
-  color: white;
-}
-
 #summary {
   width: 100%;
-  display: block;
   margin-left: 90px;
   margin-right: 90px;
 }
@@ -353,15 +384,6 @@ svg #circle {
 #summary h3 {
   font-size: 2.4em;
   line-height: 0.5em;
-}
-
-#summary #donutChart {
-  text-align: center;
-}
-
-#correct,
-#correct p {
-  text-align: left;
 }
 
 #correct p,
@@ -384,36 +406,16 @@ svg #circle {
 }
 
 .footer {
-  text-align: center;
   margin-top: 60px;
 }
 
 .button1 {
   background-color: transparent;
   font-size: 2em;
-  font: bold;
+  font-weight: bold;
   padding: 15px 60px;
   cursor: pointer;
   -webkit-box-shadow: 2px 0px 18px 3px #232c7c;
   box-shadow: 2px 0px 18px 3px #2b3899;
   border: 3px solid white;
-  color: white;
-  font-family: 'Outfit', sans-serif;
 }
-
-/* .container-donut {
-  position: relative;
-}
-
-.donut-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.donut-text p {
-  text-align: center;
-  font-size: 5px;
-  font-weight: bold;
-} */

@@ -80,7 +80,7 @@ body,
 #correct h2,
 #wrong h2,
 h1 {
-  font-size: 60px;
+  font-size: 3em;
 }
 
 .button-transparent,
@@ -91,7 +91,8 @@ h2 {
 }
 
 span,
-#results h1, .button,
+#results h1,
+.button,
 .button-transparent,
 .button-review {
   font-weight: 700;
@@ -108,8 +109,7 @@ span,
   display: inline-block;
 }
 
-#checked div:nth-of-type(2),
-.risultati {
+#checked div:nth-of-type(2) {
   width: 30%;
 }
 
@@ -381,18 +381,20 @@ svg #circle {
 
 /* RESULTS PAGE */
 
+.risultati {
+  width: 33%;
+}
+
+.header-results {
+  margin-bottom: 60px;
+}
+
 #results p {
-  font-size: 32px;
   font-weight: 300;
 }
 
 #results {
   line-height: 0em;
-}
-
-#summary {
-  margin-left: 90px;
-  margin-right: 90px;
 }
 
 #summary h3 {

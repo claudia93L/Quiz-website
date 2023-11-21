@@ -112,21 +112,20 @@ const paginaQuiz = document.getElementById('paginaQuiz');
 const countdown = document.getElementById('countdown');
 let question = document.querySelector('#question h1');
 const answers = document.getElementById('answers');
-const fourAnswers = document.getElementById('four-answers');
-const twoAnswers = document.getElementById('two-answers');
 const counter = document.getElementById('counter');
 let answer1 = document.querySelector('#answer-1 button');
 let answer2 = document.querySelector('#answer-2 button');
 let answer3 = document.querySelector('#answer-3 button');
 let answer4 = document.querySelector('#answer-4 button');
 let answerLine2 = document.getElementById('answer-line2');
-let registraRisposte = 0;
+
 let lunghezzaArray = questions.length;
 let wrongAnswers = 0;
 let numeroRisposteDate = 0;
 const results = document.getElementById('results');
 
 let answer = '';
+let interval;
 
 let score = 0; //registraPunteggio
 let questionNumber = 0;
@@ -186,7 +185,6 @@ function gestoreClickBottoni() {
 
 function verificaRisposta() {
   // console.log(answer);
-
   if (answer === answer1.innerText) {
     score++;
     //array registra risposte
@@ -213,8 +211,6 @@ function cambioDomanda() {
   questionNumber++;
   caricaQuiz();
 }
-
-let interval;
 
 function setTimer() {
   let countdownNumerEl = document.getElementById('countdown-number');
@@ -264,7 +260,7 @@ function mostraRisultati(score) {
       ? 'Complimenti, hai superato il test.'
       : 'Mi dispiace, ritenta la prossima volta.';
 
-  const canvas = document.getElementById('donutChart');
+  document.getElementById('donutChart');
 
   let totaleCorrette = document.querySelector('#correct p');
   totaleCorrette.innerText = `${score}/${lunghezzaArray} questions`;
@@ -278,7 +274,7 @@ function mostraRisultati(score) {
   percentualeSbagliate.innerText = `${perSbagliate}%`;
 
   const grafico = document.getElementById('donutChart').getContext('2d');
-  const donutChart = new Chart(grafico, {
+  new Chart(grafico, {
     type: 'doughnut',
     data: {
       datasets: [

@@ -1,3 +1,5 @@
+// BASE DATI
+
 const questions = [
   {
     id: 0,
@@ -104,7 +106,7 @@ const questions = [
   },
 ];
 
-/* Caricare la prima domanda e le prime risposte */
+// DICHIARAZIONE VARIABILI GLOBALI
 
 const paginaQuiz = document.getElementById('paginaQuiz');
 const countdown = document.getElementById('countdown');
@@ -129,6 +131,8 @@ let answer = '';
 let score = 0; //registraPunteggio
 let questionNumber = 0;
 
+// DIV DEI QUIZ
+
 document.addEventListener('DOMContentLoaded', function () {
   caricaQuiz();
 });
@@ -142,7 +146,7 @@ function caricaQuiz() {
 
     answer1.innerText = questions[questionNumber].correct_answer;
     answer2.innerText = questions[questionNumber].incorrect_answers[0];
-    // if (answerLine2 )
+  
     answer3.innerText = questions[questionNumber].incorrect_answers[1];
     answer4.innerText = questions[questionNumber].incorrect_answers[2];
 
@@ -238,6 +242,8 @@ function numeroDomanda() {
     questionNumber + 1
   } <span class="">/ ${lunghezzaArray}</span>`;
 }
+
+// DIV DEI RISULTATI
 
 function risposteSbagliate() {
   wrongAnswers = lunghezzaArray - 1 - score;

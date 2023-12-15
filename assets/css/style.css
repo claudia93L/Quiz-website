@@ -354,7 +354,7 @@ svg {
   transform: rotateY(-180deg) rotateZ(-90deg);
 }
 
-svg #circle {
+#circle {
   stroke-dasharray: 113px;
   stroke-dashoffset: 0px;
   stroke-linecap: round;

@@ -118,6 +118,7 @@ let answer2 = document.querySelector('#answer-2 button');
 let answer3 = document.querySelector('#answer-3 button');
 let answer4 = document.querySelector('#answer-4 button');
 let answerLine2 = document.getElementById('answer-line2');
+let circle = document.querySelector('#circle');
 
 let lunghezzaArray = questions.length;
 let wrongAnswers = 0;
@@ -137,27 +138,50 @@ document.addEventListener('DOMContentLoaded', function () {
   gestoreClickBottoni();
 });
 
+function mescolaRisposte() {
+  // Creo un array con tutte le risposte (la corretta e le sbagliate)
+
+  /* The code is creating an array called `allAnswers` that contains the correct answer and all the
+  incorrect answers for the current question. It uses the `questionNumber` variable to access the
+  correct question object from the `questions` array, and then uses the spread operator (`...`) to
+  spread the elements of the `incorrect_answers` array into the `allAnswers` array. */
+  const allAnswers = [
+    questions[questionNumber].correct_answer,
+    ...questions[questionNumber].incorrect_answers,
+  ];
+
+  /* Mescolare l'array delle risposte in modo casuale direttamente qui 
+  
+  Sottraendo 0.5, stiamo creando una probabilità casuale che il risultato sia positivo o negativo, il che influenzerà l'ordine casuale degli elementi nell'array. In pratica, questo crea un effetto di mescolamento degli elementi dell'array in modo casuale.
+  */
+  /* The code is shuffling the array of answers randomly. It uses the `sort()` method with a compare
+  function that returns a random number between -0.5 and 0.5. This random number determines the
+  order in which the elements of the array are sorted, effectively shuffling the array. */
+
+  return allAnswers.sort(() => Math.floor(Math.random() - 0.5));
+}
+
 function caricaQuiz() {
   if (questionNumber < questions.length) {
     const domandaCorrente = questions[questionNumber].question;
     question.innerText = domandaCorrente;
 
-    question.innerText = domandaCorrente;
+    const shuffledAnswers = mescolaRisposte();
 
-    answer1.innerText = questions[questionNumber].correct_answer;
-    answer2.innerText = questions[questionNumber].incorrect_answers[0];
-
-    answer3.innerText = questions[questionNumber].incorrect_answers[1];
-    answer4.innerText = questions[questionNumber].incorrect_answers[2];
+    // Assegnare le risposte mescolate ai bottoni
+    answer1.innerText = shuffledAnswers[0];
+    answer2.innerText = shuffledAnswers[1];
+    answer3.innerText = shuffledAnswers[2];
+    answer4.innerText = shuffledAnswers[3];
 
     if (questions[questionNumber].type === 'boolean') {
       answerLine2.style.display = 'none';
     } else {
       answerLine2.style.display = 'inline';
     }
+
     setTimer();
     numeroDomanda();
-    risposteSbagliate();
   }
 }
 
@@ -184,11 +208,17 @@ function gestoreClickBottoni() {
 }
 
 function verificaRisposta() {
-  // console.log(answer);
-  if (answer === answer1.innerText) {
+  const rispostaSelezionata = answer;
+
+  // Trova la risposta corretta tra le risposte mescolate
+  const rispostaCorretta = questions[questionNumber].correct_answer;
+
+  if (rispostaSelezionata === rispostaCorretta) {
     score++;
-    //array registra risposte
-    console.log('risposta esatta');
+    //console.log('Risposta corretta!');
+  } else {
+    wrongAnswers++;
+    //console.log('Risposta sbagliata!');
   }
 
   numeroRisposteDate++;
@@ -210,6 +240,7 @@ function verificaRisposta() {
 function cambioDomanda() {
   questionNumber++;
   caricaQuiz();
+  resettaCerchioTimer();
 }
 
 function setTimer() {
@@ -229,6 +260,14 @@ function setTimer() {
   }, 1000);
 }
 
+function resettaCerchioTimer() {
+  // da rivedere
+  circle.style.strokeDashoffset = '0px';
+  circle.style.animation = 'countdown 20s linear infinite forwards';
+  circle.style.fill = 'none';
+  circle.style.strokeDasharray = '113px';
+}
+
 function numeroDomanda() {
   const h5 = document.createElement('h5');
   const seh5 = counter.querySelector('h5');
@@ -243,12 +282,6 @@ function numeroDomanda() {
 }
 
 // DIV DEI RISULTATI
-
-function risposteSbagliate() {
-  wrongAnswers = lunghezzaArray - 1 - score;
-  return wrongAnswers;
-  //console.log(wrongAnswers);
-}
 
 function mostraRisultati(score) {
   const totaleRisposte = score + wrongAnswers;
